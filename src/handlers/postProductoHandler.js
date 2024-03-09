@@ -2,10 +2,9 @@ const postProducto = require("../controllers/postProducto.js")
 
 
 async function postProductoHandler(req, res) {
-  const { nombre, descripcion, imageUrl, precio } = req.body;
-
+  const { nombre, descripcion, imagenUrl, precio } = req.body;
   try {
-    const nuevoProducto = await postProducto(nombre, descripcion, imageUrl, precio);
+    const nuevoProducto = await postProducto(nombre, descripcion, imagenUrl, precio);
     res.status(201).json(nuevoProducto);
   } catch (error) {
     console.error('Error al intentar crear el producto:', error);

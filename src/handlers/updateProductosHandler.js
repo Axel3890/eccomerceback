@@ -2,13 +2,13 @@ const updateProducto = require("../controllers/updateProductos")
 
 async function updateProductoHandler(req, res) {
   const { id } = req.params;
-  const { nombre, descripcion, imageUrl, precio } = req.body;
+  const { nombre, descripcion, imagenUrl, precio } = req.body;
 
   try {
     const nuevoDatosProducto = {
       name: nombre,
       description: descripcion,
-      imageUrl: imageUrl,
+      imagenUrl: imagenUrl,
       price: precio
     };
 
