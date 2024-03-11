@@ -17,6 +17,6 @@ router.post("/productos", postProductosHandler);
 router.get("/productos/:id", getProductoByIdHandler);
 router.delete("/productos/:id", deleteProductoHandler);
 router.put("/productos/:id", updateProductoHandler);
-router.get("/login", login)
+router.post("/login", login)
 router.post("/createUser", registroHandler)
 module.exports = router;
