@@ -1,9 +1,12 @@
-const { Productos } = require("../db.js")
+const { Productos, Marcas } = require("../db.js");
 
 async function getProductoById(id) {
-  console.log("soy id de controller", id)
-  const producto = await Productos.findByPk(id);
+  const producto = await Productos.findByPk(id, {
+    include: Marcas
+  });
+  
   return producto;
 }
 
 module.exports = getProductoById;
+

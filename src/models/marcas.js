@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 
-
 module.exports = (sequelize) => {
     sequelize.define('Marcas', {
         id: {
@@ -17,5 +16,7 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         }
+    }, {
+        timestamps: false
     });
 };
